@@ -172,6 +172,11 @@ hr.section-line {
         width: 33.3%;
         // margin: 1.5px;
     }
+    &:after {
+        clear: both;
+        display: table;
+        content: "";
+    }
 }
 .pricing {
     position: relative;
@@ -223,6 +228,9 @@ hr.section-line {
         }
     }
 }
+
+
+
 footer {
     height: 100px;
     position: relative;
@@ -235,5 +243,40 @@ footer {
         span {
             font-size: 18px;
         }
+    }
+}
+// Media Queries
+@media screen and (max-width: 350px) {
+    .portfolio {
+        position: relative;
+        .portfolio-holder img {
+            // float: left;
+            width: 100%;
+            // margin: 1.5px;
+        }
+        &:after {
+            clear: both;
+            display: table;
+            content: "";
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .portfolio {
+        position: relative;
+        .portfolio-holder img {
+            float: left;
+            width: 50%;
+            // margin: 1.5px;
+        }
+        &:after {
+            clear: both;
+            display: table;
+            content: "";
+        }
+    }
+    .pricing #pricing-table {
+        width: 100%;
+        margin: 10px 0px;
     }
 }
