@@ -30,62 +30,75 @@ hr.section-line {
 @import url('https://fonts.googleapis.com/css?family=Orbitron:400,500');
 
 //3. Head Section
-#head-intro {
-    height: 500px;
-    background: black;
+#back-intro {
+    z-index: -2;
     position: relative;
-    border-bottom: 10px rgba(0, 0, 0, 0.8) solid;
-    margin-bottom: 30px;
+    background: #1b91df;
+    width: 100%;
+    max-height: 100%;
     &:after {
         content: "";
         display: block;
         position: absolute;
-        bottom: -20px;
-        box-shadow: 0px 10px 40px black;
+        bottom: -40px;
+        box-shadow: 0px 20px 40px black;
         width: 90%;
         margin: 0 auto;
-        height: 20px;
+        height: 10px;
         left: 50%;
-        z-index: -1;
+        z-index: -2;
         transform: translate(-50%, -50%);
     }
-    .logo {
-        position: fixed;
-        top: 2%;
-        right: 2%;
-        z-index: 99;
-        img {
-            max-width: 100%;
-            height: 100px;
-        }
-    }
-    .caption {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        font-family: $font-obiwan;
-        .head-text {
-            text-transform: uppercase;
-            margin: 0;
-            font-size: auto;
-            &:after {
-                display: block;
-                width: 30%;
-                background: white;
-                content: "";
-                height: 2px;
-                margin: 10px auto;
-                box-shadow: 0px 2px 20px white;
+    #head-intro {
+        height: 500px;
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        border-radius: 50px / 5px;
+        top: 50px;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.707);
+        border-top: 10px rgba(0, 0, 0, 0.8) solid;
+        margin-bottom: 100px;
+        z-index: 9;
+        .logo {
+            position: fixed;
+            top: 2%;
+            right: 2%;
+            z-index: 99;
+            img {
+                max-width: 100%;
+                height: 100px;
             }
         }
-        .sub-text {
-            margin: 0px;
-            font-size: auto;
+        .caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: $font-obiwan;
+            .head-text {
+                text-transform: uppercase;
+                margin: 0;
+                font-size: auto;
+                &:after {
+                    display: block;
+                    width: 30%;
+                    background: white;
+                    content: "";
+                    height: 2px;
+                    margin: 10px auto;
+                    box-shadow: 0px 2px 20px white;
+                }
+            }
+            .sub-text {
+                margin: 0px;
+                font-size: auto;
+            }
         }
-    }
+    }    
 }
+
 //4. About Section
 #about {
     position: relative;
